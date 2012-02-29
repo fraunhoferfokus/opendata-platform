@@ -1,8 +1,8 @@
 Contacts:
 
-Nikolay Tcholtchev, nikolay.tcholtchev@fokus.fraunhofer.de
-Evanela Lapi, evanela.lapi@fokus.fraunhofer.de
-Florian Marienfeld, evanela.lapi@fokus.fraunhofer.de
+Nikolay Tcholtchev, nikolay.tcholtchev_at_fokus.fraunhofer.de
+Evanela Lapi, evanela.lapi_at_fokus.fraunhofer.de
+Florian Marienfeld, florian.marienfeld_at_fokus.fraunhofer.de
 
 
 This is an early version (0.51) of the Open Data platform of Fraunhofer FOKUS.
