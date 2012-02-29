@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<project name="oc-datasets-portlet-portlet" basedir="." default="deploy">
+	<import file="../build-common-portlet.xml" />
+	<target name="remote-deploy">
+		<scp todir="" file="../../dist/oc-datasets-portlet-6.0.5.1.war">
+		</scp>
+	</target>  
+</project>

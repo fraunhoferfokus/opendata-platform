@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<project name="portlet" basedir="." default="deploy">
+	<import file="../build-common-portlet.xml" />
+	<!-- target name="remote-deploy">
+		<scp trust="true" todir="ldeploy:Jah8iena@172.19.4.183:/opt/liferay-portal-6.0.6/deploy/" file="../../dist/org.opencities.berlin.opendata.jsp.rssupdater-portlet-6.0.2.1.war">
+		</scp>
+	</target -->
+</project>

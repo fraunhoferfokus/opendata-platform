@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.oc", "org.opencities.berlin.opendata.entity.service");

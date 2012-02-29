@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<portlet-app version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>oc-manage-datasets-portlet</portlet-name>
+		<display-name>OC Manage Datasets</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/manage-datasets-portlet.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>OC Manage Datasets</title>
+			<short-title>OC Manage Datasets</short-title>
+			<keywords>OC Manage Datasets</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>ocAction</supported-public-render-parameter>
+        <supported-public-render-parameter>pId</supported-public-render-parameter>
+	</portlet>
+	<public-render-parameter>
+		<identifier>ocAction</identifier>
+		<qname xmlns:x="http://sun.com/params">x:ocAction</qname>
+	</public-render-parameter>
+    <public-render-parameter>
+        <identifier>pId</identifier>
+        <qname xmlns:x="http://sun.com/params">x:pId</qname>
+    </public-render-parameter>
+</portlet-app>

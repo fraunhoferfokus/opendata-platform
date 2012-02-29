@@ -1,0 +1,1 @@
+This is the 0.51 version of the Open Data platform of Fraunhofer FOKUS.

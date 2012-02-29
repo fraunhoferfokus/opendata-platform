@@ -1,0 +1,12 @@
+span.searchInput {
+	padding: 0 15px 0 15px;
+}
+
+.searchqueryInput {
+	width: 750px;
+}
+
+span.searchLabel {
+	font-size: larger;
+	font-weight: bold;
+}

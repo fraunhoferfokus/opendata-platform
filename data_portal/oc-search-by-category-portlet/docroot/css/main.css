@@ -1,0 +1,41 @@
+.image {
+	float: left;
+	margin: 0 15px 0 15px;
+	height: 80px;
+}
+
+.cwrapper {
+	position: relative;
+	float: left;
+	left: 0px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.ccontent {
+	padding: 15px 0 15px 0;
+}
+
+.cleft1 {
+	position: relative;
+	float: left;
+	left: 5px;
+	width: 32%;
+	height: 80px;
+}
+
+.cleft2 {
+	position: relative;
+	float: left;
+	left: 15px;
+	width: 32%;
+	height: 80px;
+}
+
+.cleft3 {
+	position: relative;
+	float: left;
+	left: 25px;
+	width: 32%;
+	height: 80px;
+}
