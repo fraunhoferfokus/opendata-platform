@@ -49,12 +49,15 @@ Compilation and Deployment of a Development System:
   * Start CKAN on your local or on a dedicated machine
   * Checkout the portlets/plugins within the Eclipse based Liferay SDK
   * Build and deploy the portlets using the belonging ant scripts (build.xml)
-	  o This step would require you to adapt the ant scripts for your Liferay SDK 
-  * Build the middleware and caching libraries and copy them to the oc-ext/docroot/WEB-INF/ext-lib/global
-	  o This step would require that you first build the caching component, then provide it as a library
-	    to the middleware component, and finally compile the middleware component 
-  * Adjust the oc-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties file. The fields are well commented
-    and exaplained within the file
+	  o This step would require you to adapt 
+	    the ant scripts for your Liferay SDK 
+  * Build the middleware and caching libraries and copy them to the 
+    oc-ext/docroot/WEB-INF/ext-lib/global
+	  o This step would require that you first build the caching component, 
+	    then provide it as a library to the middleware component, and finally 
+	    compile the middleware component 
+  * Adjust the oc-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties 
+    file. The fields are well commented and exaplained within the file
   * Deploy oc-ext using the belonging build.xml
   * Start the Liferay Server from within your Eclipse environment.
   
