@@ -1,10 +1,13 @@
 Contacts:
-
+-------------------------------------------------------------
 Nikolay Tcholtchev, nikolay.tcholtchev_at_fokus.fraunhofer.de
 Evanela Lapi, evanela.lapi_at_fokus.fraunhofer.de
 Florian Marienfeld, florian.marienfeld_at_fokus.fraunhofer.de
 
 
+
+General Information:
+------------------------------------------------------------------
 This is an early version (0.51) of the Open Data platform of Fraunhofer FOKUS.
 Please consider that the software will be much improved and refactored within
 the coming versions.
@@ -15,14 +18,21 @@ Open Cities project (http://opencities.net, Grant agreement: 270896).
 
 We are glad to accept any type of constructive suggestions.
 
-The standard configuration builds on a CKAN backend for storing the metadata and
-a Liferay based frontend. The software here constitutes the belonging portlets 
-and plugins which were developed as Liferay extensions. 
+The standard configuration builds on a CKAN (Comprehensive Knowledge Archive Network) 
+backend for storing the metadata and a Liferay based frontend. 
+Liferay is a web application portal/server  
+running on top of a corresponding application server, mostly Tomcat. 
+It allows for developing portlet type of web applications. The software 
+here constitutes the belonging portlets and plugins which were developed 
+as Liferay extensions.  
 
 
+
+How to proceed for Developers:
+------------------------------------------------
 
 Prerequisites
------------------------------------------------
+-----------------------
 
   * Install CKAN 1.5
   * Install OpenJDK
@@ -32,52 +42,20 @@ Prerequisites
       o Liferay 6 Pugins SDK, don't unzip 
   * download, unzip Eclipse JEE Indigo
       o liferay plugin sdk
-          + unzip into workspace eg. into workspace/sdk
-          + adjust build.properties: create a separate properties file
-            named "build.${user.name}.properties" with the properties to
-            overwrite:
-
-            #on the mac you might have to switch compilers:
-                javac.compiler=modern
-                #javac.compiler=org.eclipse.jdt.core.JDTCompilerAdapter
-            ...
-                #
-                # Specify the paths to an unzipped Tomcat bundle.
-                #
-                app.server.type=tomcat
-                app.server.dir=/<path-to>/liferay-portal-6.x.x/tomcat-7.xxx
-
-  * Via marketplace install liferay IDE, subversion plugin
-    (subclipse/subversive)
-  * in eclipse-preference -> liferay-ides add ide choose workspace/sdk,
-    tick "open in eclipse"
-  * in servers-view add liferay 6.1 server
-
-    cd workspace
-    cd sdk/portlets
-    svn co $SVNREPO/data_portal/oc-datasets-portlet/
-    svn co $SVNREPO/data_portal/oc-manage-datasets-portlet/
-    svn co $SVNREPO/data_portal/oc-persistent-caching-portlet/
-    svn co $SVNREPO/data_portal/oc-search-by-category-portlet/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.cache.updater-portlet/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.middleware.adapter-portlet/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.portlet.spring.startpageboxes-portlet/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.portlet.spring.startpagesearch-portlet/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.uploaddata-portlet/
-    cd ../themes
-    svn co $SVNREPO/themes/oc-standard-theme
-    cd ../hooks
-    svn co $SVNREPO/data_portal/oc-hook
-    cd ../ext
-    svn co $SVNREPO/oc-ext
-    cd ../.. # i.e. workspace dir
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.caching/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.jsp.rssupdater/
-    svn co $SVNREPO/data_portal/org.opencities.berlin.opendata.middleware/
-
-  * import -> liferay project from plugins sdk: select sdk and target
-    runtime server, tick all projects checked out with svn
-  * drag each project build.xml into ant-view
 
 
-
+Compilation and Deployment of a Development System:
+----------------------------------------------------
+  * Start CKAN on your local or on a dedicated machine
+  * Checkout the portlets/plugins within the Eclipse based Liferay SDK
+  * Build and deploy the portlets using the belonging ant scripts (build.xml)
+	  o This step would require you to adapt the ant scripts for your Liferay SDK 
+  * Build the middleware and caching libraries and copy them to the oc-ext/docroot/WEB-INF/ext-lib/global
+	  o This step would require that you first build the caching component, then provide it as a library
+	    to the middleware component, and finally compile the middleware component 
+  * Adjust the oc-ext/docroot/WEB-INF/ext-impl/src/portal-ext.properties file. The fields are well commented
+    and exaplained within the file
+  * Deploy oc-ext using the belonging build.xml
+  * Start the Liferay Server from within your Eclipse environment.
+  
+  
