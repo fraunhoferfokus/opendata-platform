@@ -1,9 +1,7 @@
 
 General Information:
 ------------------------------------------------------------------
-This is an early version (0.51) of the Open Data platform of Fraunhofer FOKUS.
-Please consider that the software will be much improved and refactored within
-the coming versions.
+This is Version 1.0 of the Open Data platform of Fraunhofer FOKUS.
 
 The Open Data platform has been developed in the course of the EU
 Open Cities project (http://opencities.net, Grant agreement: 270896). 
