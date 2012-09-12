@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-
-<project name="ext" basedir="." default="deploy">
-	<import file="../build-common-ext.xml" />
-	<target name="remote-deploy">
-		<scp trust="true" todir="" file="../../dist/oc-ext-6.0.2.1.war">
-		</scp>
-	</target>
-</project>

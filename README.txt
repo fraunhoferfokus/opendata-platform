@@ -1,10 +1,3 @@
-Contacts:
--------------------------------------------------------------
-Nikolay Tcholtchev, nikolay.tcholtchev_at_fokus.fraunhofer.de
-Evanela Lapi, evanela.lapi_at_fokus.fraunhofer.de
-Florian Marienfeld, florian.marienfeld_at_fokus.fraunhofer.de
-
-
 
 General Information:
 ------------------------------------------------------------------
@@ -34,11 +27,11 @@ How to proceed for Developers:
 Prerequisites
 -----------------------
 
-  * Install CKAN 1.5
+  * Install CKAN 1.7.1
   * Install OpenJDK
   * Download from  LifeRay.com
     <http://www.liferay.com/de/downloads/liferay-portal/available-releases>
-      o Liferay Portal 6 bundled with tomcat, unzip
+	  o Liferay Portal 6 bundled with tomcat, unzip
       o Liferay 6 Pugins SDK, don't unzip 
   * download, unzip Eclipse JEE Indigo
       o liferay plugin sdk

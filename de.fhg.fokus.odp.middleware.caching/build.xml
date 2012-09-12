@@ -1,0 +1,48 @@
+<project name="de.fhg.fokus.odp.middleware.caching" basedir="." default="main">
+
+	<property name="src.dir" value="src" />
+	
+	<property name="build.dir" location="build" />
+	<property name="classes.dir" location="${build.dir}/classes" />
+	<property name="jar.dir" location="${build.dir}/jar" />
+	<property name="docs.dir" location="${build.dir}/docs" />
+		
+	<property name="main-class" value="" />
+	<property name="lib.dir" value="./lib" />
+	
+    <!-- property name="main-class"  value="org.opencities.berlin.opendata.ckan.gateway.xTestCKANGateway"/ -->
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${classes.dir}"  debug="true" />
+	</target>
+
+	<target name="jar" depends="compile">
+
+		<mkdir dir="${jar.dir}" />
+		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}" />
+	</target>
+	
+	<target name="jar-docs" depends="docs">
+		<jar destfile="${jar.dir}/${ant.project.name}-docs.jar" basedir="${docs.dir}" />
+	</target>
+
+	<!-- Creates Javadoc -->
+	<target name="docs" depends="compile">
+		<mkdir dir="${docs.dir}" />
+		<javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+			<!-- Define which files / directory should get included, we include all -->
+			<fileset dir="${src.dir}">
+				<include name="**" />
+			</fileset>
+		</javadoc>
+	</target>
+		
+	<target name="clean-build" depends="clean,jar, jar-docs" />
+	<target name="main" depends="clean,jar, jar-docs" />
+
+</project>

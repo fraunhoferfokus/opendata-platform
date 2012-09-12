@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-
-<project name="portlet" basedir="." default="deploy">
-	<import file="../build-common-portlet.xml" />
-	<target name="remote-deploy">
-			<scp trust="true" todir="" file="../../dist/org.opencities.berlin.opendata.cache.updater-portlet-6.0.2.1.war">
-			</scp>
-	</target>
-</project>

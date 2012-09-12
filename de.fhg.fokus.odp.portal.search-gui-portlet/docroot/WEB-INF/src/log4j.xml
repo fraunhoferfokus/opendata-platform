@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration>
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n" />
+        </layout>
+    </appender>
+    
+    <logger name="org.springframework">
+        <level value="info"/>
+    </logger>
+    <logger name="org.springframework.beans.PropertyEditorRegistrySupport">
+        <level value="debug"/>
+    </logger>
+    
+    <logger name="de.fhg.fokus.odp.portal.searchgui">
+        <level value="debug"/>
+    </logger>
+ 
+    <root>
+        <level value="debug" />
+        <appender-ref ref="stdout" />
+    </root>
+</log4j:configuration>

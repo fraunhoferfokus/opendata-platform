@@ -1,0 +1,9 @@
+
+0
+  File>Import>Checkout Projects from SVN
+    select search-portlet>Next>Checkout as project in the workspace>Next
+      Location: /path-to/liferay-plugins-sdk-6.0.6-20110225/portlets>OK>Finish
+1 
+  Project[context menu]>Convert to Faceted Form>OK
+2
+  Project[context menu]>Liferay>Convert to Liferay project...> select "Liferay target runtime" and Finish

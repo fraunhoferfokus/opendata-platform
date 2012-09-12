@@ -1,1 +1,28 @@
-This is the 0.51 version of the Open Data platform of Fraunhofer FOKUS.
+r869. This is the 1.0 version of the Open Data platform of Fraunhofer FOKUS.
+
+
+------------------------------------
+Open Data Platform (ODP) Version 1.0
+------------------------------------
+
+New main features comming with this new version 1.0
+
+1. Upgraded ODP middleware. This is now working with CKAN 1.7.1
+2. Re-development and redesign of dataset page
+3. Re-development and redesign of dataset-details page
+4. Improvement of search and extended search functionalities
+5. Added extended search to startpage
+6. Added frindly URL for datasets and datasets categories
+7. Re-development of latest-datasets functionality using latest CKAN API 3
+8. Re-development of most-used-tags functionality using latest CKAN API 3
+9. Added tweet and email funtionalities for a given dataset
+10.Added resource type for a dataset. This is particularly useful to distingush a dataset from its documentation
+
+
+Following bugs are fixed
+
+1. Persistent data cashing issue (platform crashing issue)
+2. Fields missing in Bulk Upload template. A new template is provided for bulk upload
+3. Temporal coverage not added from bulk upload
+4. Friendly URLs
+5. Several issues with publish and edit metadata

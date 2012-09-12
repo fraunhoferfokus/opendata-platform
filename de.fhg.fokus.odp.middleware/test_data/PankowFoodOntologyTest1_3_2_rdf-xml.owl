@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.fokus.fraunhofer.de/ontologies/2011/PankowFoodOntologyTest1.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#" xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.fokus.fraunhofer.de/ontologies/2011/PankowFoodOntologyTest1.owl"> 
+  <rdf:Description rdf:about="#organisation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#hastInspected">
+    <rdfs:range rdf:resource="#inspection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#organisation"/>
+    <owl:inverseOf rdf:resource="#doneBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#doneBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#organisation"/>
+    <rdfs:domain rdf:resource="#inspection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#wasInspectedAt">
+    <rdfs:domain rdf:resource="#shop"/>
+    <rdfs:range rdf:resource="#inspection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#positiveSmiley">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Majesty-Grill">
+    <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.58525</latitude>
+    <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pankow</district>
+    <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.36687</longitude>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="#shop"/>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hauptstr. 9, 13158 Berlin</adress>
+    <wasInspectedAt rdf:resource="#Majesty-GrillInspection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Zum_Treffpunkt_2">
+    <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pankow</district>
+    <wasInspectedAt rdf:resource="#Zum_Treffpunkt_2Inspection"/>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greifswalder Str. 194, 10405 Berlin</adress>
+    <rdf:type rdf:resource="#shop"/>
+    <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.535034</latitude>
+    <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.431248</longitude>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Ingos-BruzelbudeInspection">
+    <doneBy rdf:resource="#Bezirksamt_Pankow_von_Berlin"/>
+    <rdf:type rdf:resource="#inspection"/>
+    <inspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-07-21</inspectionDate>
+    <inspectedShop rdf:resource="#Ingos-Bruzelbude"/>
+    <positiveSmiley rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</positiveSmiley>
+    <failedInspection rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</failedInspection>
+  </rdf:Description>
+  <rdf:Description rdf:about="#failedInspection">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#adress1">
+    <rdfs:comment xml:lang="de">null</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Aydin-Dönerproduktion">
+    <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.443312</longitude>
+    <wasInspectedAt rdf:resource="#Aydin-DönerproduktionInspection"/>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roelckestr. 162, 13086 Berlin</adress>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="#shop"/>
+    <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.55199</latitude>
+  </rdf:Description>
+  <rdf:Description rdf:about="#district">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Bezirksamt_Pankow_von_Berlin">
+    <hastInspected rdf:resource="#Zum_Treffpunkt_2Inspection"/>
+    <hastInspected rdf:resource="#Ingos-BruzelbudeInspection"/>
+    <hastInspected rdf:resource="#Aydin-DönerproduktionInspection"/>
+    <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.54051</latitude>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.427339</longitude>
+    <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pankow</district>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breite Str. 24A, 13187 Berlin</adress>
+    <rdf:type rdf:resource="#organisation"/>
+    <hastInspected rdf:resource="#Majesty-GrillInspection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Zum_Treffpunkt_2Inspection">
+    <inspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-28</inspectionDate>
+    <inspectedShop rdf:resource="#Zum_Treffpunkt_2"/>
+    <positiveSmiley rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</positiveSmiley>
+    <rdf:type rdf:resource="#inspection"/>
+    <doneBy rdf:resource="#Bezirksamt_Pankow_von_Berlin"/>
+    <failedInspection rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</failedInspection>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="#inspection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#inspectedShop">
+    <owl:inverseOf rdf:resource="#wasInspectedAt"/>
+    <rdfs:domain rdf:resource="#inspection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#shop"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#inspection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Ingos-Bruzelbude">
+    <wasInspectedAt rdf:resource="#Ingos-BruzelbudeInspection"/>
+    <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.55149</latitude>
+    <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.41108</longitude>
+    <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pankow</district>
+    <rdf:type rdf:resource="#shop"/>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seelower Straße 6,  10439 Berlin</adress>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:first rdf:resource="#shop"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#longitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#adress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Aydin-DönerproduktionInspection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="#inspection"/>
+    <doneBy rdf:resource="#Bezirksamt_Pankow_von_Berlin"/>
+    <positiveSmiley rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</positiveSmiley>
+    <inspectedShop rdf:resource="#Aydin-Dönerproduktion"/>
+    <inspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-10-30</inspectionDate>
+    <failedInspection rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</failedInspection>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="#organisation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Example-Shop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="#shop"/>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roelckestr. 162, 13086 Berlin</adress>
+    <inspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-10-30</inspectionDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Example-Organisation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">sample instance of organisation</rdfs:label>
+    <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pankow</district>
+    <adress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bezirksamt Pankow von Berlin</adress>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="#organisation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#latitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#shop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#inspectionDate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Majesty-GrillInspection">
+    <inspectedShop rdf:resource="#Majesty-Grill"/>
+    <positiveSmiley rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</positiveSmiley>
+    <inspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-02-03</inspectionDate>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="#inspection"/>
+    <doneBy rdf:resource="#Bezirksamt_Pankow_von_Berlin"/>
+    <failedInspection rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</failedInspection>
+  </rdf:Description>
+</rdf:RDF>
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

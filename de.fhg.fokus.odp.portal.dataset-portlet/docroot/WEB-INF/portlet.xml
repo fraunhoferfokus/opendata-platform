@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<portlet-app
+	version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
+	<portlet>
+		<portlet-name>de.fhg.fokus.odp.portal.dataset</portlet-name>
+		<display-name>de.fhg.fokus.odp.portal.dataset</display-name>
+		<portlet-class>de.fhg.fokus.odp.portal.datasets.BrowseDatasets</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>de.fhg.fokus.odp.portal.dataset</title>
+			<short-title>de.fhg.fokus.odp.portal.dataset</short-title>
+			<keywords>de.fhg.fokus.odp.portal.dataset</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+<!-- 		<supported-processing-event> -->
+<!-- 			<qname xmlns:xs="http://sun.com/tourevents">xs:packageSearch</qname> -->
+<!-- 		</supported-processing-event> -->
+<!-- 		<supported-processing-event> -->
+<!-- 			<qname xmlns:xs="http://sun.com/tourevents">xs:packageDetails</qname> -->
+<!-- 		</supported-processing-event> -->
+		<supported-processing-event>
+			<qname xmlns:xs="http://sun.com/tourevents">xs:packageSearchResult</qname>
+		</supported-processing-event>
+		<supported-processing-event>
+			<qname xmlns:xs="http://sun.com/tourevents">xs:packageDetailsResult</qname>
+		</supported-processing-event>
+		<supported-publishing-event>
+			<qname xmlns:xs="http://sun.com/tourevents">xs:packageSearch</qname>
+		</supported-publishing-event>
+		<supported-publishing-event>
+			<qname xmlns:xs="http://sun.com/tourevents">xs:packageDetails</qname>
+		</supported-publishing-event>
+		<supported-public-render-parameter>ocAction</supported-public-render-parameter>
+		<supported-public-render-parameter>pId</supported-public-render-parameter>
+		<supported-public-render-parameter>searchQuery</supported-public-render-parameter>
+		
+	</portlet>
+	<event-definition>
+		<qname xmlns:xs="http://sun.com/tourevents">xs:packageSearch</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:xs="http://sun.com/tourevents">xs:packageDetails</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+		<event-definition>
+		<qname xmlns:xs="http://sun.com/tourevents">xs:packageSearchResult</qname>
+		<value-type>String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:xs="http://sun.com/tourevents">xs:packageDetailsResult</qname>
+		<value-type>String</value-type>
+	</event-definition>
+
+    <public-render-parameter>
+        <identifier>ocAction</identifier>
+        <qname xmlns:x="http://sun.com/params">x:ocAction</qname>
+    </public-render-parameter>
+   	<public-render-parameter>
+		<identifier>pId</identifier>
+		<qname xmlns:x="http://sun.com/params">x:pId</qname>
+	</public-render-parameter>
+	<public-render-parameter>
+		<identifier>searchQuery</identifier>
+		<qname xmlns:x="http://sun.com/params">x:searchQuery</qname>
+	</public-render-parameter>
+</portlet-app>
